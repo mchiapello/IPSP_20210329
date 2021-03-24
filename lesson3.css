@@ -166,7 +166,8 @@
     display: block;
     text-align: center;
     padding: 2px;
-	background-color: #BF1E0F;
+	#background-color: #BF1E0F;
+	background-color: #FA434A;
     margin: 15px;
 }
 

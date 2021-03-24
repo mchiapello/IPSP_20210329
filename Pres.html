@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Microbiota</title>
+    <title>IPSP - Presentation</title>
     <meta charset="utf-8" />
     <meta name="author" content="Marco Chiapello" />
     <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <script src="libs/mark.js/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":false,"autoSearch":true}) })</script>
     <link rel="stylesheet" href="scrollable.css" type="text/css" />
     <link rel="stylesheet" href="mtheme_max.css" type="text/css" />
     <link rel="stylesheet" href="fonts_mtheme_max.css" type="text/css" />
@@ -19,7 +25,7 @@
 
 
 
-class: title-slide
+class: title-slide hide_logo
 
 
 # .font120[.center[Fungal interactions]]
@@ -40,6 +46,282 @@ class: title-slide
 
 .parR[
 Buongiorno a tutti
+]
+
+---
+
+class: clear
+
+# .center[.black[Overview]]
+
+.pull-left[
+- Su cosa ho lavorato in passato
+.m0p[
+&lt;img src="images/lubridate.png" width="150px" style="display: block; margin: auto;" /&gt;
+]
+
+-  Su cosa sto lavorando ora
+.m0p[
+&lt;img src="images/today.png" width="150px" style="display: block; margin: auto;" /&gt;
+]
+
+]
+
+
+.pull-right[
+- Side-projects
+.m0p[
+&lt;img src="images/sideProj.png" width="250px" style="display: block; margin: auto;" /&gt;
+]
+
+- Su cosa vorrei lavorare
+.m0p[
+&lt;img src="images/future.png" width="250px" style="display: block; margin: auto;" /&gt;
+]
+
+.font50[.right[.grey[Credits to @Allisonhorst]]]
+]
+
+???
+
+.h201[
+
+In questa breve presentazione vorrei provare a raccontarvi chi sono, su cosa ho lavorato e quali esperienze mi hanno portato fino a qui.
+
+- Vorrei iniziare con un salto nel passato raccontandovi le esperienze fatte prima del mio arrivo all'IPSP
+ 
+- Di cosa mi sono occupato nei 2 anni di lavoro presso la sede di Torino
+ 
+- Vorrei anche dedicare qualche parola ad alcuni side projects o collaborazioni particolarmente significative
+ 
+- Ed infine illustrarvi quali potrebbero essere i lavori futuri
+
+]
+
+---
+
+layout: true
+
+class: clear
+# .center[.black[Overview]]
+
+---
+
+background-image: url("images/overview1.png")
+background-size: contain
+
+???
+
+.h202[
+- Il filo conduttore e la forza trainante della mia ricerca sono sempre stati i funghi
+]
+
+---
+
+background-image: url("images/overview2.png")
+background-size: contain
+
+???
+
+.h202[
+- All'Universita degli Studi di Torino nel 2006, ho iniziato il mio dottorato in Biologia e Biotecnologia dei Funghi, lavorando su 2 progetti: 
+    - un fungo ericoide coinvolto nella detossificazione di suoli altamente inquinati da metalli pesanti
+    - un fungo coinvolto nella detossificazione delle fibre di amianto
+
+- La tecnica utilizzata per entrambi i progetti e stata la proteomica.
+
+- Ci tengo a sottolinearlo perche, fino a prima di quello al CNR, tutti i precedenti contratti sono stati ottenuti in quanto esperto di proteomica
+]
+
+---
+
+background-image: url("images/overview3.png")
+background-size: contain
+
+???
+
+.h202[
+- Dopo il dottorato, ho spostato il mio ambito di ricerca sui funghi micorrizici arbuscolari
+
+- Ho iniziato un postDoc a Lausanne con Uta Paszkoswi su un progetto molto ambizioso: cioe identificare il proteoma della membrana periarbuscolare
+
+- Nelle slide successive spieghero piu nel dettaglio il progetto e i risultati ottenuti
+]
+---
+
+background-image: url("images/overview4.png")
+background-size: contain
+
+???
+
+.h202[
+- Infine, nell'ambito del progetto europeo H2020: VIROPLANT, coordinato da massimo Turina,
+mi sono occupato di identificare il viroma di Plasmopara viticola, un oomicete causa della peronospora della vite.
+
+- Per questa presentazione ho deciso di focalizzarmi su 3 macro settori e per ognuno di essi vorrei raccontarvi una storia
+]
+
+---
+
+layout: true
+
+# Bioremediation
+
+---
+
+class: inverse, middle, center 
+
+----
+
+---
+
+background-image: url("images/niep1.jpg")
+background-size: contain
+
+???
+
+.h202[
+- Questa e la foresta di Niepolomice in polonia, un posto bellissimo
+
+- Purtroppo nella seconda meta' dello scorso secolo l'industrializzazione ha causato l'innalzamento delle concentrazioni di metalli pesanti nel terreno riducendo drasticamente la flora della foresta
+
+- La prima pianta che riusci a ricolonizzare le zone piu' altamente inquinate fu Vaccinium myrtillus
+
+- La resistenza alle elevate concentrazioni di HM e' stato scoperto essere  conferita alla pianta da un fungo Ericoide che cresce in simbiosi con la pianta: *Oidiodendron maius*
+]
+
+---
+
+.font120[**Cosa sono i metalli pesanti?**]
+
+.pull-left[
+.h202[
+- Elementi metallici con una densita' maggiore di 5 g/cm3 (Adriano, 1986).
+
+- Troviamo HM sia tra gli elementi essenziali sia tra gli elementi non essenziali
+]
+
+.font120[**Che effetti hanno?**]
+
+.h202[
+- **Diretti**: I metalli possono legarsi a biomolecole e interferire con il loro funzionamento
+
+- **Indiretti**: I metalli possono causare un aumento delle specie reattive dell’ossigeno (ROS)
+]
+]
+
+.pull-right[
+.m0p[
+&lt;img src="images/metalli_pesanti.jpg" width="350px" style="display: block; margin: auto;" /&gt;
+]
+&lt;br&gt;
+.m0p[
+&lt;img src="images/metalli_pesanti2.jpg" width="350px" style="display: block; margin: auto;" /&gt;
+]
+]
+
+???
+
+.h202[
+
+- Facciamo un passo indietro, cosa sono i HM?
+
+- ...
+
+- Che effetti hanno sugli esseri viventi?
+
+]
+
+---
+
+
+.font120[*Oidiodendron maius*]
+
+.pull-left[
+.m0tp[
+.par23[
+- *O. maius*  Zn e' un fungo che forma simbiosi intracellulari con le radici di Ericaeae (micorrize ericoidi)
+
+- *O. maius*  Zn e' stato isolato da terreni contenenti elevate concentrazione di zinco
+
+- *O. maius*  Zn ha dimostrato elevata tolleranza sia a zinco che a cadmio (Martino et al. 2000)
+]
+]
+]
+
+    
+.pull-right[
+&lt;img src="images/oidiodendron_maius.jpg" width="350px" style="display: block; margin: auto;" /&gt;
+.font50[.right[.grey[Source: https://mycor.nancy.inra.fr]]]
+]
+
+.content-box-red2[
+Studiare i meccanismi di difesa di *O. maius* nei confronti di Cadmio e Zinco
+]
+---
+
+.font120[**Proteomics**]
+
+.pull-left[
+.font100[Gel-based]
+.m0tp[
+&lt;img src="images/gelBased.png" width="350px" style="display: block; margin: auto;" /&gt;
+]
+]
+
+    
+.pull-right[
+.font100[Gel-free]
+&lt;br&gt;
+&lt;img src="images/ms-spectra.png" width="550px" style="display: block; margin: auto;" /&gt;
+.right[.font50[(Chiapello et al., 2015)]]
+]
+
+???
+
+.h202[
+- Dopo aver fatto crescere il fungo in presenza di Cd o Zn 
+
+- Sono state estratte le proteine ed e' stata studiata la loro espressione con due approcci complementari: 
+    - La proteomica bidimensionale seguita da immunoblotting
+    - Shotgun proteomics
+
+- In particolare la parte di immunoblotting e' stata eseguita presso l'Universita' di Calgary in Canada, mentre la parte di shotgun proteomics e' stata eseguita al centro di proteomica di York
+]
+
+
+---
+
+.pull-left[
+.par25[
+- **Risposte specifiche**
+
+    - Zinco
+    - Cadmio
+
+- **Risposte comuni**
+
+    - CU/Zn superoxide dismutase
+    - Agmatinase
+]
+]
+    
+.pull-right[
+&lt;img src="images/chiapello2015.png" width="400px" style="display: block; margin: auto;" /&gt;
+]
+
+???
+
+.h202[
+- Questa ricerca ha portato alla pubblicazione di un articolo che metteva in risalto le risposte specifiche e comuni del fungo alla presenza dei due metalli
+
+- In particolare 
+    - La presenza di zinco aumentava in maniera significativa il metabolismo legato alla produzione di energia e al metabolismo dei carboidrati
+    - La presenza di cadmio induceva la produzione di chaperonine della famiglia HSP90 e proteine del citoscheletro 
+
+- Le proteine comuni indotte dai due metalli erano Rame/zinco superossido dismutasi e l'ubiquitina, tra quelle note. 
+
+- La scoperta fatta in questo lavoro e' stata la presenza di uan proteina chiamata agmatinase, un enzima coinvolto nella via di biosintesi delle poliamine. Queste proteine hanno importanti funzioni in risposta agli stress abiotici.
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
