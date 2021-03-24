@@ -1,67 +1,3 @@
----
-title: "Microbiota"
-subtitle: "Lesson 3"
-author: "Marco Chiapello"
-date: "???"
-output:
-  xaringan::moon_reader:
-    css: ["scrollable.css", "mtheme_max.css", "fonts_mtheme_max.css", "lesson3.css"]
-    self_contained: false
-    lib_dir: libs
-    chakra: libs/remark-latest.min.js
-    nature:
-      ratio: '16:9'
-      highlightStyle: github
-      highlightLines: true
-    countIncrementalSlides: false
-    seal: false  
----
-
-```{r setup, include=FALSE, cache=FALSE}
-# TO render: rmarkdown::render('Lesson3.Rmd', 'xaringan::moon_reader')
-
-# set working directory to docs folder
-setwd(here::here("docs"))
-
-# Set global R options
-options(htmltools.dir.version = FALSE, servr.daemon = TRUE)
-
-# Set global knitr chunk options
-knitr::opts_chunk$set(
-  fig.align = "center", 
-  cache = TRUE,
-  error = FALSE,
-  message = FALSE, 
-  warning = FALSE, 
-  collapse = TRUE 
-)
-
-# This is good for getting the ggplot background consistent with
-# the html background color
-# library(ggplot2)
-# thm <- theme_bw()
-# theme_set(thm)
-
-library(RefManageR)
-BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "authoryear",
-           style = "markdown",
-           hyperlink = FALSE,
-           max.names = 2,
-           dashed = FALSE)
-bib <- ReadBib("biblio/bib.bib", check = FALSE)
-```
-
-```{r xaringanExtra, echo=FALSE}
-library(xaringanExtra)
-use_tile_view() 
-```
-
-class: title-slide
-
-
-
 # .font170[Ecological Significance of Viruses]
 
 
@@ -1506,6 +1442,7 @@ layout: true
 .center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
 ]
 ]
+
 
 
 
