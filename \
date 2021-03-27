@@ -1,0 +1,695 @@
+---
+title: "IPSP - Presentation"
+author: "Marco Chiapello"
+date: "???"
+output:
+  xaringan::moon_reader:
+    css: ["scrollable.css", "mtheme_max.css", "fonts_mtheme_max.css", "lesson3.css"]
+    self_contained: false
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+    countIncrementalSlides: false
+    seal: false  
+---
+
+```{r setup, include=FALSE, cache=FALSE}
+# TO render: rmarkdown::render('Lesson3.Rmd', 'xaringan::moon_reader')
+
+# set working directory to docs folder
+setwd(here::here())
+
+# Set global R options
+options(htmltools.dir.version = FALSE, servr.daemon = TRUE)
+
+# Set global knitr chunk options
+knitr::opts_chunk$set(
+  fig.align = "center", 
+  cache = TRUE,
+  error = FALSE,
+  message = FALSE, 
+  warning = FALSE, 
+  collapse = TRUE 
+)
+
+# This is good for getting the ggplot background consistent with
+# the html background color
+# library(ggplot2)
+# thm <- theme_bw()
+# theme_set(thm)
+
+# library(RefManageR)
+# BibOptions(check.entries = FALSE,
+#            bib.style = "authoryear",
+#            cite.style = "authoryear",
+#            style = "markdown",
+#            hyperlink = FALSE,
+#            max.names = 2,
+#            dashed = FALSE)
+# bib <- ReadBib("biblio/bib.bib", check = FALSE)
+```
+
+```{r xaringanExtra, echo=FALSE}
+library(xaringanExtra)
+use_tile_view() 
+#use_scribble()
+use_animate_css()
+# use_logo(image_url = "images/IPSPweb_ITA.jpg")
+use_search(show_icon = FALSE)
+```
+
+class: title-slide hide_logo
+
+
+# .font120[.center[Fungal interactions]]
+# .font100[.center[from bioremediation to biocontrol agents]] 
+# .font100[.center[through mycorrhizal symbiosis]]
+
+
+<br><br>
+.marco[
+.tada[Marco Chiapello]
+<br>
+2021-03-29
+]
+
+.rigth[Seminario - Istituto per la Protezione Sostenibile delle Piante]
+
+???
+
+.parR[
+Buongiorno a tutti
+]
+
+---
+class: clear middle center
+
+```{r echo = FALSE, out.width="650px"}
+knitr::include_graphics("images/lubridate.png")
+```
+
+
+---
+
+exclude: true
+class: clear
+
+# .center[.black[Overview]]
+
+.pull-left[
+- Su cosa ho lavorato in passato
+.m0p[
+```{r echo = FALSE, out.width="150px"}
+knitr::include_graphics("images/lubridate.png")
+```
+]
+
+-  Su cosa sto lavorando ora
+.m0p[
+```{r echo = FALSE, out.width="150px"}
+knitr::include_graphics("images/today.png")
+```
+]
+
+]
+
+
+.pull-right[
+- Side-projects
+.m0p[
+```{r echo = FALSE, out.width="250px"}
+knitr::include_graphics("images/sideProj.png")
+```
+]
+
+- Su cosa vorrei lavorare
+.m0p[
+```{r echo = FALSE, out.width="250px"}
+knitr::include_graphics("images/future.png")
+```
+]
+
+.font50[.right[.grey[Credits to @Allisonhorst]]]
+]
+
+???
+
+.h201[
+
+In questa breve presentazione vorrei provare a raccontarvi chi sono, su cosa ho lavorato e quali esperienze mi hanno portato fino a qui.
+
+- Vorrei iniziare con un salto nel passato raccontandovi le esperienze fatte prima del mio arrivo all'IPSP
+ 
+- Di cosa mi sono occupato nei 2 anni di lavoro presso la sede di Torino
+ 
+- Vorrei anche dedicare qualche parola ad alcuni side projects o collaborazioni particolarmente significative
+ 
+- Ed infine illustrarvi quali potrebbero essere i lavori futuri
+
+]
+
+---
+
+layout: true
+
+class: clear
+# .center[.black[Overview]]
+
+---
+
+background-image: url("images/overview1.png")
+background-size: contain
+
+???
+
+.h202[
+- Il filo conduttore e la forza trainante della mia ricerca sono sempre stati i funghi
+]
+
+---
+
+background-image: url("images/overview2.png")
+background-size: contain
+
+???
+
+.h202[
+- All'Universita degli Studi di Torino nel 2006, ho iniziato il mio dottorato in Biologia e Biotecnologia dei Funghi, lavorando su 2 progetti: 
+    - un fungo ericoide coinvolto nella detossificazione di suoli altamente inquinati da metalli pesanti
+    - un fungo coinvolto nella detossificazione delle fibre di amianto
+
+- La tecnica utilizzata per entrambi i progetti e stata la proteomica.
+
+- Ci tengo a sottolinearlo perche, fino a prima di quello al CNR, tutti i precedenti contratti sono stati ottenuti in quanto esperto di proteomica
+]
+
+---
+
+background-image: url("images/overview3.png")
+background-size: contain
+
+???
+
+.h202[
+- Dopo il dottorato, ho spostato il mio ambito di ricerca sui funghi micorrizici arbuscolari
+
+- Ho iniziato un postDoc a Lausanne con Uta Paszkoswi su un progetto molto ambizioso: cioe identificare il proteoma della membrana periarbuscolare
+
+- Nelle slide successive spieghero piu nel dettaglio il progetto e i risultati ottenuti
+]
+---
+
+background-image: url("images/overview4.png")
+background-size: contain
+
+???
+
+.h202[
+- Infine, nell'ambito del progetto europeo H2020: VIROPLANT, coordinato da massimo Turina,
+mi sono occupato di identificare il viroma di Plasmopara viticola, un oomicete causa della peronospora della vite.
+
+- Per questa presentazione ho deciso di focalizzarmi su 3 macro settori e per ognuno di essi vorrei raccontarvi una storia
+]
+
+---
+
+layout: true
+
+# Bioremediation
+
+---
+
+class: inverse, middle, center 
+
+----
+
+---
+
+background-image: url("images/niep1.jpg")
+background-size: contain
+
+???
+
+.h202[
+- Questa e la foresta di Niepolomice in polonia, un posto bellissimo
+
+- Purtroppo nella seconda meta' dello scorso secolo l'industrializzazione ha causato l'innalzamento delle concentrazioni di metalli pesanti nel terreno riducendo drasticamente la flora della foresta
+
+- La prima pianta che riusci a ricolonizzare le zone piu' altamente inquinate fu Vaccinium myrtillus
+
+- La resistenza alle elevate concentrazioni di HM e' stato scoperto essere  conferita alla pianta da un fungo Ericoide che cresce in simbiosi con la pianta: *Oidiodendron maius*
+]
+
+---
+
+.font120[**Cosa sono i metalli pesanti?**]
+
+.pull-left[
+.h202[
+- Elementi metallici con una densita' maggiore di 5 g/cm3 (Adriano, 1986).
+
+- Troviamo HM sia tra gli elementi essenziali sia tra gli elementi non essenziali
+]
+
+.font120[**Che effetti hanno?**]
+
+.h202[
+- **Diretti**: I metalli possono legarsi a biomolecole e interferire con il loro funzionamento
+
+- **Indiretti**: I metalli possono causare un aumento delle specie reattive dell’ossigeno (ROS)
+]
+]
+
+.pull-right[
+.m0p[
+```{r echo = FALSE, out.width="350px"}
+knitr::include_graphics("images/metalli_pesanti.jpg")
+```
+]
+<br>
+.m0p[
+```{r echo = FALSE, out.width="350px"}
+knitr::include_graphics("images/metalli_pesanti2.jpg")
+```
+]
+]
+
+???
+
+.h202[
+
+- Facciamo un passo indietro, cosa sono i HM?
+
+- ...
+
+- Che effetti hanno sugli esseri viventi?
+
+]
+
+---
+
+
+.font120[*Oidiodendron maius*]
+
+.pull-left[
+.m0tp[
+.par23[
+- *O. maius*  Zn e' un fungo che forma simbiosi intracellulari con le radici di Ericaeae (micorrize ericoidi)
+
+- *O. maius*  Zn e' stato isolato da terreni contenenti elevate concentrazione di zinco
+
+- *O. maius*  Zn ha dimostrato elevata tolleranza sia a zinco che a cadmio (Martino et al. 2000)
+]
+]
+]
+
+    
+.pull-right[
+```{r echo=FALSE, out.width="350px"}
+knitr::include_graphics("images/oidiodendron_maius.jpg")
+```
+.font50[.right[.grey[Source: https://mycor.nancy.inra.fr]]]
+]
+
+.content-box-red2[
+Studiare i meccanismi di difesa di *O. maius* nei confronti di Cadmio e Zinco
+]
+---
+
+.font120[**Proteomics**]
+
+.pull-left[
+.font100[Gel-based]
+.m0tp[
+```{r echo=FALSE, out.width="350px"}
+knitr::include_graphics("images/gelBased.png")
+```
+]
+]
+
+    
+.pull-right[
+.font100[Gel-free]
+<br>
+```{r echo=FALSE, out.width="550px"}
+knitr::include_graphics("images/ms-spectra.png")
+```
+.right[.font50[(Chiapello et al., 2015)]]
+]
+
+???
+
+.h202[
+- Dopo aver fatto crescere il fungo in presenza di Cd o Zn 
+
+- Sono state estratte le proteine ed e' stata studiata la loro espressione con due approcci complementari: 
+    - La proteomica bidimensionale seguita da immunoblotting
+    - Shotgun proteomics
+
+- In particolare la parte di immunoblotting e' stata eseguita presso l'Universita' di Calgary in Canada, mentre la parte di shotgun proteomics e' stata eseguita al centro di proteomica di York
+]
+
+
+---
+
+.pull-left[
+.par25[
+- **Risposte specifiche**
+
+    - Zinco
+    - Cadmio
+
+- **Risposte comuni**
+
+    - CU/Zn superoxide dismutase
+    - Agmatinase
+]
+]
+    
+.pull-right[
+```{r echo=FALSE, out.width="400px"}
+knitr::include_graphics("images/chiapello2015.png")
+```
+]
+
+???
+
+.h202[
+- Questa ricerca ha portato alla pubblicazione di un articolo che metteva in risalto le risposte specifiche e comuni del fungo alla presenza dei due metalli
+
+- In particolare 
+    - La presenza di zinco aumentava in maniera significativa il metabolismo legato alla produzione di energia e al metabolismo dei carboidrati
+    - La presenza di cadmio induceva la produzione di chaperonine della famiglia HSP90 e proteine del citoscheletro 
+
+- Le proteine comuni indotte dai due metalli erano Rame/zinco superossido dismutasi e l'ubiquitina, tra quelle note. 
+
+- La scoperta fatta in questo lavoro e' stata la presenza di uan proteina chiamata agmatinase, un enzima coinvolto nella via di biosintesi delle poliamine. Queste proteine hanno importanti funzioni in risposta agli stress abiotici.
+]
+
+---
+
+layout: true
+
+# Arbuscular Mycorrhizal Fungi
+
+---
+
+class: inverse, middle, center 
+
+----
+
+---
+
+.pull-left[
+.m0tp[
+.par25[
+- Oltre l'80% delle piante forma una simbiosi micorrizica arbuscolare
+
+- E' la simbiosi piu' antica
+
+- Ha probabilmente avuto un ruolo nella colonizzazione delle terre emerse 450 MYA
+
+]
+]
+]
+    
+.pull-right[
+.m0tp[
+```{r echo=FALSE, out.width="450px"}
+knitr::include_graphics("images/AMF.png")
+```
+]]
+
+---
+background-image: url(images/parni.png)
+background-size: cover
+
+
+???
+
+.h202[
+- L'arbuscolo e' il cuore della simbiosi
+
+- L'arbuscolo e' una struttura fungina altamente ramificata che che si sviluppa nelle cellule coricali delle radici delle piante
+
+- La struttura fungina non entra a contatto con il citoplasmadella pianta
+
+- La pianta sviluppa una struttura chiamata membrana peri arbuscolare che circonda l'arbuscolo e attraverso la quale avvengono gli scambi di sostanze nutritive e segnali
+]
+
+---
+
+.center[.font100[**Identificare le proteine segnale localizzate sulla membrana peri arbuscolare**]]
+
+.pull-left[
+.m0tp[
+.par30[
+- Due piante 
+    - Riso
+    - Mais
+- Due approcchi:
+    - LCM - Transcriptomics
+    - Proteomics
+]
+]
+]
+
+    
+.pull-right[
+```{r echo=FALSE, out.width="500px"}
+knitr::include_graphics("images/amf2.png")
+```
+]
+
+???
+
+.h202[
+- Quando arrivai a Losanna era appena stato fatto un esperimento di LCM - Transcriptomics ed erano stati identificati alcuni candidati (proteine coinvolte nel signaling situate sulla membrana peri-arbuscolare)
+
+- L'esperimento era stato fatto su riso, quindi cominciai anch'io a lavorare su riso
+
+- Nell'immagine di sx potete vedere una radice di riso cresciuta in modo da aumentate il numero di radici laterali, che sono quelle preferibilmente colonizzare dal fungo. Il materiale biologico e' molto esiguo e anche se il grado di colonizzazione e' molto alto, cmq la quantita' di PAM non e' molto abbondante
+
+- Dopo circa 1 anno e mezzo di fallimenti cambiai modello sperimentale passando al mais
+
+- Questa pianta aveva 2 enormi vantaggi: il materiale biologico era molto abbondante e quando la pianta era colonizzata le radici producevano un pigmento giallo che permetteva facilmente di arricchire il campione
+]
+
+---
+
+.center[.font100[**Identificare le proteine segnale localizzate sulla membrana peri arbuscolare**]]
+
+```{r echo=FALSE, out.width="650px"}
+knitr::include_graphics("images/amf1.png")
+```
+
+---
+
+.center[.font100[**Identificare le proteine segnale localizzate sulla membrana peri arbuscolare**]]
+
+```{r echo=FALSE, out.width="450px"}
+knitr::include_graphics("images/amf3.png")
+```
+
+
+---
+
+.center[.font100[**Capire la funzione dei recettori identificati**]]
+
+.pull-left[
+.m0tp[
+.par25[
+- Analisi della localizzazione
+    - LYK1-mRFP non detectata
+    - ARK1-mRFP localizzata sulla PAM
+<br>
+<br>
+- Analisi funzionale
+    - *lyk1* mutants (Tos17 insertions): nessun effetto
+    - *ark1* mutants (Tos 17 insertion): necessario per il mantenimento della simbiosi
+]
+]
+]
+
+    
+.pull-right[
+```{r echo=FALSE, out.width="300px"}
+knitr::include_graphics("images/amf4.png")
+```
+```{r echo=FALSE, out.width="300px"}
+knitr::include_graphics("images/amf5.png")
+```
+.right[.font50[(Roth, Chiapello et al. 2018)]]
+]
+
+---
+
+.center[.font100[**Capire la funzione dei recettori identificati**]]
+
+.pull-left[
+.m0tp[
+.par25[
+- Analisi della localizzazione
+    - LYK1-mRFP non detectata
+    - ARK1-mRFP localizzata sulla PAM
+<br>
+<br>
+- Analisi funzionale
+    - *lyk1* mutants (Tos17 insertions): nessun effetto
+    - *ark1* mutants (Tos 17 insertion): necessario per il mantenimento della simbiosi
+]
+]
+]
+
+    
+.pull-right[
+```{r echo=FALSE, out.width="350px"}
+knitr::include_graphics("images/amf6.png")
+```
+]
+
+---
+
+layout: true
+
+# Virus detection
+
+---
+
+class: inverse, middle, center 
+
+----
+
+.font70[.grey[mycoviruses as biocontrol agents]]
+---
+
+.pull-left[
+.font100[*Plasmopara viticola*]
+.m0tp[
+.par25[
+- *Plasmopara viticola* e' un oomicete, originario dell'America importato e accidentalmente in Europa intorno al 1878
+- *P. viticola* causa la peronospora della vite, una delle piu' diffuse e pericolose malattie della vite
+- Causando perdite per millioni di euro all'anno
+- Contenuta con pesticidi chimici
+]
+
+.content-box-red2[Identificare specifici micovirus di *P. viticola* da utilizzare come agenti di biocontrollo]
+
+]
+]
+    
+.pull-right[
+```{r echo=FALSE, out.width="300px"}
+knitr::include_graphics("images/pv.jpg")
+```
+.right[.font50[Zhang et al., 2017]]
+]
+
+---
+
+.pull-left[
+.m0t[
+```{r echo=FALSE, out.width="400px"}
+knitr::include_graphics("images/S1.jpg")
+```
+]]
+
+.pull-right[
+<br>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9ZMrUGRzMvw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+.pull-left[
+.m0tp[
+.par25[
+- Identificati 283 virus:
+    - 222 positve stranded RNA viruses
+    - 29 negative stranded RNA viruses
+    - 27 double stranded RNA virus
+    - 5 ORFan virus
+
+<br>
+]
+
+.content-box-red2[Notevole aumento della storia evolutiva dei micovirus]
+]
+]
+    
+.pull-right[
+```{r echo=FALSE, out.width="400px"}
+knitr::include_graphics("images/pv.png")
+```
+]
+
+???
+
+.h202[
+- I risultati di questo lavoro ci hanno permesso di espandere enormemente la storia evolutiva dei micovirus, aumentando le specie presenti nel clade Riboviria
+- Sono stati individuati, nuovi 283 virus di cui
+    - 222 positve stranded RNA viruses
+    - 29 negative stranded RNA viruses
+    - 27 double stranded RNA virus
+    - 5 virus sono stati individuati studiano la dark matter
+    
+Vorrei soffermare la mia attenzione su qusti ultimi 5 virus per spiegare bene cosa si intenda per studio della dark matter e su altri 2 nuovi gruppi di virus
+]
+
+---
+
+.pull-left[
+.center[.font120[ORFans]]
+.center[.font100[.grey[Phylum Lenarviricota]]]
+]
+
+    
+.pull-right[
+```{r echo=FALSE, out.width="200px"}
+knitr::include_graphics("images/pv2.png")
+```
+]
+
+???
+
+.h202[
+- La nostra pipeline si basa su omologia con virus gia' presenti in NCBI per identificare nuovi virus.
+
+- Questo approccio impedisce di identificare nuovi virus che non presentano omologie in NCBI
+
+- Applicando una serie di filtri:
+    - Contigs piu lunghi di 1000
+    - Che codificano per una protein adi almeno 150 aminoacidi
+    - Che non presentano tutte le reads su un senso o sull'altro (perche e' tipico dei virus che replicano presentare sia lo strand piu' che lo strand meno)
+]
+
+
+---
+
+
+class: clear middle center
+
+```{r echo = FALSE, out.width="550px"}
+knitr::include_graphics("images/today.png")
+```
+
+---
+
+class: clear middle center
+
+```{r echo = FALSE, out.width="850px"}
+knitr::include_graphics("images/sideProj.png")
+```
+
+
+---
+
+class: clear middle center
+
+```{r echo = FALSE, out.width="850px"}
+knitr::include_graphics("images/future.png")
+```
