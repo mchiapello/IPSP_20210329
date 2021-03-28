@@ -80,8 +80,10 @@ class: title-slide hide_logo
 
 ???
 
-.parR[
-Buongiorno a tutti
+.h202[
+- Buongiorno a tutti
+- Mi chiamo Marco Chiapello e sono ricercatore a tempo determinato della sede di Torino
+- Oggi vorrei raccontarvi alcune delle esperieze e dei lavori significativi che ho fatto in questi anni e che mi hanno permesso di essere qui oggi
 ]
 
 ---
@@ -91,64 +93,10 @@ class: clear middle center
 knitr::include_graphics("images/lubridate.png")
 ```
 
-
----
-
-exclude: true
-class: clear
-
-# .center[.black[Overview]]
-
-.pull-left[
-- Su cosa ho lavorato in passato
-.m0p[
-```{r echo = FALSE, out.width="150px"}
-knitr::include_graphics("images/lubridate.png")
-```
-]
-
--  Su cosa sto lavorando ora
-.m0p[
-```{r echo = FALSE, out.width="150px"}
-knitr::include_graphics("images/today.png")
-```
-]
-
-]
-
-
-.pull-right[
-- Side-projects
-.m0p[
-```{r echo = FALSE, out.width="250px"}
-knitr::include_graphics("images/sideProj.png")
-```
-]
-
-- Su cosa vorrei lavorare
-.m0p[
-```{r echo = FALSE, out.width="250px"}
-knitr::include_graphics("images/future.png")
-```
-]
-
-.font50[.right[.grey[Credits to @Allisonhorst]]]
-]
-
 ???
 
-.h201[
-
-In questa breve presentazione vorrei provare a raccontarvi chi sono, su cosa ho lavorato e quali esperienze mi hanno portato fino a qui.
-
-- Vorrei iniziare con un salto nel passato raccontandovi le esperienze fatte prima del mio arrivo all'IPSP
- 
-- Di cosa mi sono occupato nei 2 anni di lavoro presso la sede di Torino
- 
-- Vorrei anche dedicare qualche parola ad alcuni side projects o collaborazioni particolarmente significative
- 
-- Ed infine illustrarvi quali potrebbero essere i lavori futuri
-
+.h202[
+- Vorrei cominciando questo viaggio nel passato raccontandovi tre storie  
 ]
 
 ---
@@ -166,8 +114,7 @@ background-size: contain
 ???
 
 .h202[
-- Il filo conduttore e la forza trainante della mia ricerca sono sempre stati i funghi
-]
+- Il filo conduttore delle tre storie sara' lo studio dei funghi]
 
 ---
 
@@ -211,7 +158,6 @@ background-size: contain
 - Infine, nell'ambito del progetto europeo H2020: VIROPLANT, coordinato da massimo Turina,
 mi sono occupato di identificare il viroma di Plasmopara viticola, un oomicete causa della peronospora della vite.
 
-- Per questa presentazione ho deciso di focalizzarmi su 3 macro settori e per ognuno di essi vorrei raccontarvi una storia
 ]
 
 ---
@@ -225,6 +171,12 @@ layout: true
 class: inverse, middle, center 
 
 ----
+
+???
+
+.h202[
+- Iniziero' con il progetto del dottorato sullo studio della tolleranza ai metalli pesanti
+]
 
 ---
 
@@ -317,6 +269,19 @@ knitr::include_graphics("images/oidiodendron_maius.jpg")
 .content-box-red2[
 Studiare i meccanismi di difesa di *O. maius* nei confronti di Cadmio e Zinco
 ]
+
+
+???
+
+.h202[
+- O maius ceppo Zinco e' stato isolato da terreni fortemente contaminati da metalli pesanti
+
+- Proprio per questo ha sviluppato una elevata tolleranza a questi metalli in particolare Cadmio e Zinco
+
+- Questo fungo e' in grado di sviluppare simbiosi intracellulari con piante della famiglia Ericaceae
+
+- Obiettivo del progetto e' stata l'investigazione dei meccanismi di tolleranza di questo fungo a Cadmio e Zinco
+]
 ---
 
 .font120[**Proteomics**]
@@ -365,6 +330,7 @@ knitr::include_graphics("images/ms-spectra.png")
 - **Risposte comuni**
 
     - CU/Zn superoxide dismutase
+    - Ubiquitin
     - Agmatinase
 ]
 ]
@@ -588,6 +554,14 @@ knitr::include_graphics("images/pv.jpg")
 .right[.font50[Zhang et al., 2017]]
 ]
 
+???
+.h202[
+- P.viticola e' un oomicete diffusosi in Europa alla fine dell'800
+- E' di origine Americana e causa la malattia della vite nota come Peronospora che causa ogni anni milioni di euro di danni
+
+- L'obiettivo del progetto era identifivare specifici virus di P. viticola da utilizzare come agenti di biocontrollo
+]
+
 ---
 
 .pull-left[
@@ -601,6 +575,11 @@ knitr::include_graphics("images/S1.jpg")
 <br>
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9ZMrUGRzMvw?start=93" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+???
+.h202[
+ 
 ]
 
 ---
@@ -705,6 +684,11 @@ knitr::include_graphics("images/pv3.png")
 ???
 
 .h202[
+- Il secondo esempio di virus identificati e' un sottogruppo dei narnavirus con un' organizzazione genomica particolare
+
+- Presentano una seconda ORF antisenso di funzione sconosciuta
+- Filogeneticamente fanno parte dello stesso clade
+- Sono stati identificati anche da altri autori
 ]
 
 
@@ -1015,8 +999,11 @@ knitr::include_graphics("images/ab3.png")
 ]
 
 ---
-
-IBiG
+<br>
+<br>
+<br>
+.center[.font200[IBiG]]
+.center[https://carpentries.org/]
 
 ???
 
@@ -1052,6 +1039,9 @@ layout: false
 
 1. Sviluppare collaborazioni e progetti nell'ambito dell'IBiG
     - Diventare punto di riferimento per l'IPSP
+
+1. Approccio proteomico
+
 ]
 
 ---
@@ -1068,28 +1058,34 @@ knitr::include_graphics("images/debugging2.png")
 class: clear middle center
 
 ```{r echo = FALSE, out.width="1050px"}
-knitr::include_graphics("images/debugging3.png")
-
-```
-
----
-
-class: clear middle center
-
-```{r echo = FALSE, out.width="1050px"}
 knitr::include_graphics("images/debugging4.png")
 
 ```
 
----
 
-class: clear middle center
+???
 
-```{r echo = FALSE, out.width="1050px"}
-knitr::include_graphics("images/debugging1.png")
-
-```
+.h202[
+- Se avete dubbi, perplessita', suggerimenti posso rispondere ora ad alcune domande oppure potete contattarmi per eventuali approfondimenti.
+]
 
 ---
 
-class: clear
+class: clear middle
+
+`r fontawesome::fa("globe", fill = "grey")` https://mchiapello.netlify.app/
+
+`r fontawesome::fa("skype", fill = "lightblue")`  marpello
+
+`r fontawesome::fa("envelope", fill = "lightred")` marco.chiapello@ipsp.cnr.it
+
+`r fontawesome::fa("envelope", fill = "lightred")` chiapello.m@gmail.com
+
+`r fontawesome::fa("github", fill = "black")` mchiapello
+
+ 
+???
+
+.h202[
+- Grazie per l'attenzione
+]
