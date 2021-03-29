@@ -114,7 +114,7 @@ background-size: contain
 ???
 
 .h202[
-- Il filo conduttore delle tre storie sara' lo studio dei funghi]
+- Il filo conduttore delle tre storie sara' lo studio dei funghi sotto diversi punti di vista]
 
 ---
 
@@ -663,20 +663,20 @@ knitr::include_graphics("images/pv2.png")
 ---
 
 .pull-left[
-.center[.font120[Mycoambinarnavirus]]
-.center[.font100[.grey[Phylum Lenarviricota]]]
+.center[.font120[Mononegaambi virus]]
+.center[.font100[.grey[Phylum Negarnaviricota]]]
 
 .par30[
-- Nuovi narnavirus con genoma ambisenso
+- Gruppo di virus ambisenso
 
 - Raggruppati filogeneticamente in un unico clade
 
-- Funzione di rORF e' sconosciuta
+- Non abbiamo identificato il genoma completo per tutti
 ]
 ]
     
 .pull-right[
-```{r echo=FALSE, out.width="400px"}
+```{r echo=FALSE, out.width="750px"}
 knitr::include_graphics("images/pv3.png")
 ```
 ]
@@ -684,11 +684,11 @@ knitr::include_graphics("images/pv3.png")
 ???
 
 .h202[
-- Il secondo esempio di virus identificati e' un sottogruppo dei narnavirus con un' organizzazione genomica particolare
-
-- Presentano una seconda ORF antisenso di funzione sconosciuta
-- Filogeneticamente fanno parte dello stesso clade
-- Sono stati identificati anche da altri autori
+- Il secondo esempio di virus identificati e' nell'ordine dei Mononegavirales, phylum Negarnaviricota
+- Abbiamo identificato per la prima volta un gruppo di virus ambisenso
+- Una caratteristica che fino ad ora era stata vista solo nell'ordine Bunyavirales
+- Questo gruppo di virus, filogeneticamente simili, presenta una RdRp con un'orienzazione genomica antisenso e una piccola ORF in direzione opposta che codifica per il nucleocapside
+- Alcuni dei virus in questo gruppo non presentano la piccola ORF in direzione senso, ma sono anche i piu' corti e riteniamo che non siano completi
 ]
 
 
@@ -746,7 +746,6 @@ knitr::include_graphics("images/ph.png")
 ```
 ]
 ]
-
 
 ???
 
